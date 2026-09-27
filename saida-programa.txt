@@ -1,0 +1,27 @@
+===== 1) Cadastrando produtos =====
+Produtos cadastrados com sucesso:
+[0] Arroz 5kg | Preço: R$ 25.90 | Quantidade: 50
+[1] Detergente | Preço: R$ 3.50 | Quantidade: 100
+[2] Iogurte Natural | Preço: R$ 6.00 | Quantidade: 30 | Vence em: 2 dia(s) [PRÓXIMO DO VENCIMENTO - 20% OFF]
+[3] Queijo Minas | Preço: R$ 18.00 | Quantidade: 15 | Vence em: 10 dia(s)
+
+===== 2) Tentando cadastrar produto com quantidade negativa =====
+Exceção capturada corretamente -> Quantidade inválida para o produto "Produto Inválido": -5 (não pode ser negativa).
+
+===== 3) Vendendo uma quantidade válida (índice 0 - Arroz) =====
+Venda realizada com sucesso! Estoque atualizado:
+[0] Arroz 5kg | Preço: R$ 25.90 | Quantidade: 40
+[1] Detergente | Preço: R$ 3.50 | Quantidade: 100
+[2] Iogurte Natural | Preço: R$ 6.00 | Quantidade: 30 | Vence em: 2 dia(s) [PRÓXIMO DO VENCIMENTO - 20% OFF]
+[3] Queijo Minas | Preço: R$ 18.00 | Quantidade: 15 | Vence em: 10 dia(s)
+
+===== 4) Tentando vender mais do que o disponível (índice 0 - Arroz) =====
+Exceção capturada corretamente -> Estoque insuficiente para "Arroz 5kg". Disponível: 40, solicitado: 1000.
+
+===== 5) Valor total do estoque (polimorfismo em ação) =====
+Valor total do estoque: R$ 1800.00
+
+===== 6) Exemplo de sobrecarga (polimorfismo estático) =====
+Preço antes do desconto: R$ 3.5
+Preço após 10% de desconto: R$ 3.15
+Preço após tentar 50% (limitado a R$0,20 de desconto): R$ 2.9499999999999997
